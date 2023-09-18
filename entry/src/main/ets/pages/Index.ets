@@ -14,6 +14,8 @@ struct Index {
           .height(50)
         item()
         itemText()
+        Blank().height(150).backgroundColor(Color.Red)
+        Text('====')
       }
   }
 
@@ -37,13 +39,15 @@ struct item {
   @State name: string = '进入toDOList页面'
 
   build() {
+
         Text(this.name)
-          .fontSize(50)
+          .fontSize(30)
           .fontWeight(FontWeight.Bold)
           .onClick(()=>{
             router.pushUrl({url:'pages/ToDoLisPage',params:{
               src:"098"
             }})
           })
+          .margin(20)
   }
 }
