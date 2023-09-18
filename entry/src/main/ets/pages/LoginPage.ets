@@ -26,9 +26,17 @@ struct LoginPage {
           router.pushUrl({url:'pages/SecondPage',params:{
             src:"098"
           }})
+        }) .width('100%')
+        Button('返回').onClick(()=>{
+          router.back({
+            url: "pages/Index",
+            params:{
+              src:'返回数据'
+            }
+          });
         })
       }
-      .width('100%')
+
     }
     .height('100%')
   }

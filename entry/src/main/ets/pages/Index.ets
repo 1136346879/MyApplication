@@ -1,4 +1,4 @@
-import { itemText } from '../../ets/pages/itemtext';
+import { itemText } from '../view/itemtext';
 import router from '@ohos.router';
 @Entry
 @Component
@@ -6,27 +6,20 @@ struct Index {
   @State message: string = 'Hello World'
 
   build() {
-    Row() {
       Column() {
         Text(this.message)
           .fontSize(50)
+          .fontColor(Color.Red)
           .fontWeight(FontWeight.Bold)
+          .height(50)
         item()
         itemText()
       }
-      .width('100%')
-    }
-    .height('100%')
-    .onClick(()=>{
-      router.pushUrl({url:'pages/LoginPage',params:{
-        src:"098"
-      }})
-    })
   }
 
   onPageShow(){
     console.log('页面onPageShow')
-    this.message = router.getParams()?.['src']
+    this.message = router.getParams()?.['src']??"hello world"
   }
 
   aboutToAppear(){
@@ -41,11 +34,16 @@ struct Index {
 
 @Component
 struct item {
-  @State message: string = '456431'
+  @State name: string = '进入toDOList页面'
 
   build() {
-        Text(this.message)
+        Text(this.name)
           .fontSize(50)
           .fontWeight(FontWeight.Bold)
+          .onClick(()=>{
+            router.pushUrl({url:'pages/ToDoLisPage',params:{
+              src:"098"
+            }})
+          })
   }
 }
