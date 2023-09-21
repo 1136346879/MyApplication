@@ -24,14 +24,14 @@ struct LoginPage {
         })
         Button('登录',{type:ButtonType.Capsule}).onClick(()=>{
           router.pushUrl({url:'pages/SecondPage',params:{
-            src:"098"
+            src:"点击登录传过来的数据：098"
           }})
         }) .width('100%')
         Button('返回').onClick(()=>{
           router.back({
             url: "pages/Index",
             params:{
-              src:'返回数据'
+              src:'登录页面返回数据'
             }
           });
         })
@@ -39,5 +39,17 @@ struct LoginPage {
 
     }
     .height('100%')
+  }
+  onPageShow(){
+    console.log('onPageShow')
+    this.message = router.getParams()?.['src']??"登录"
+  }
+  onPageHide(){
+    console.log('onPageHide')
+}
+  onBackPress(){
+    console.log('onBackPress')
+    return false;//系统处理自己返回  默认会返回false
+    // return true;// 页面自己处理返回逻辑，不返回
   }
 }

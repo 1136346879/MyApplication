@@ -4,6 +4,7 @@
     "pages/SecondPage",
     "pages/LoginPage",
     "pages/ToDoLisPage",
-    "view/ToDoItem"
+    "view/ToDoItem",
+    "pages/LaurnchPage"
   ]
 }
