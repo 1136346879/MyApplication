@@ -4,7 +4,7 @@ import router from '@ohos.router';
 @Component
 struct Index {
   @State message: string = 'Hello World';
-@State isSwitchSourderData: boolean = true;
+  @State isSwitchSourceData: boolean = true;
   build() {
       Column() {
         Text(this.message)
@@ -14,8 +14,8 @@ struct Index {
           .height(50)
         Divider().height(1).backgroundColor(Color.Brown).margin(2)
         item()
-        itemText({isRefreshData: $isSwitchSourderData})
-        Blank().height(150).backgroundColor(this.isSwitchSourderData?Color.Red:Color.Gray)
+        itemText({isRefreshData: $isSwitchSourceData})
+        Blank().height(150).backgroundColor(this.isSwitchSourceData ? Color.Red : Color.Gray)
           .onClick(()=>{
             router.pushUrl({url:'pages/LaurnchPage',params:{
               src:"098"

@@ -7,7 +7,7 @@ export  struct itemText {
 
   build() {
     Row() {
-      Image($r('app.media.ic_default')).width(48).height(48)
+      Image(this.isRefreshData?$r('app.media.ic_default'):$r('app.media.ic_ok')).width(48).height(48)
         .onClick(()=>{
           this.isRefreshData = !this.isRefreshData
         })
