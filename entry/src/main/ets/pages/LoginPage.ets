@@ -58,7 +58,7 @@ struct LoginPage {
           this.isShowProgress = false;
           this.timeOutId = null;
           // router.replaceUrl({ url: 'pages/MainPage' });
-          router.pushUrl({url:'pages/SecondPage',params:{
+          router.pushUrl({url:'pages/MainPage',params:{
             src:"点击登录传过来的数据：098"
           }})
         }, CommonConstants.LOGIN_DELAY_TIME);

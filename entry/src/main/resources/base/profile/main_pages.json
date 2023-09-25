@@ -3,8 +3,10 @@
     "pages/Index",
     "pages/SecondPage",
     "pages/LoginPage",
+    "pages/MainPage",
     "pages/ToDoLisPage",
     "view/ToDoItem",
-    "pages/LaurnchPage"
+    "pages/LaurnchPage",
+    "pages/FindPage"
   ]
 }
