@@ -21,7 +21,7 @@ struct SecondPage {
           });
 
           router.back({
-            url: "pages/LoginPage",
+            url: "pages/MainPage",
             params:{
               src:'返回登录页面回传数据'
             }

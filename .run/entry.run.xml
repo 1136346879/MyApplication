@@ -1,0 +1,18 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="entry" type="OhosDebugTask" factoryName="OpenHarmony App" singleton="false">
+    <SYMBOL_DIRS>[]</SYMBOL_DIRS>
+    <MODULE_NAME>entry</MODULE_NAME>
+    <DEPLOY_MULTI_HAP>false</DEPLOY_MULTI_HAP>
+    <REINSTALL_APPLICATION>true</REINSTALL_APPLICATION>
+    <DEBUGGER_TYPE>Detect Automatically</DEBUGGER_TYPE>
+    <MULTI_HAP_MODULE_DATA>[]</MULTI_HAP_MODULE_DATA>
+    <SHOW_STATIC_VARIABLES>true</SHOW_STATIC_VARIABLES>
+    <LOGGING_TARGET_CHANNELS />
+    <ASAN_ENABLE_DATA>false</ASAN_ENABLE_DATA>
+    <USER_POST_ATTACH_COMMANDS>[]</USER_POST_ATTACH_COMMANDS>
+    <USER_STARTUP_COMMANDS>[]</USER_STARTUP_COMMANDS>
+    <method v="2">
+      <option name="Build.Hvigor.BeforeRunTask" enabled="true" />
+    </method>
+  </configuration>
+</component>

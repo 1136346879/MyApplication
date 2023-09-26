@@ -57,10 +57,7 @@ struct LoginPage {
         this.timeOutId = setTimeout(() => {
           this.isShowProgress = false;
           this.timeOutId = null;
-          // router.replaceUrl({ url: 'pages/MainPage' });
-          router.pushUrl({url:'pages/MainPage',params:{
-            src:"点击登录传过来的数据：098"
-          }})
+          router.replaceUrl({ url: 'pages/MainPage' });
         }, CommonConstants.LOGIN_DELAY_TIME);
       }
     }
@@ -130,7 +127,7 @@ struct LoginPage {
         .fontWeight(FontWeight.Medium)
       Button('返回').onClick(()=>{
         router.back({
-          url: "pages/Index",
+          url: "pages/MainPage",
           params:{
             src:'登录页面返回数据'
           }

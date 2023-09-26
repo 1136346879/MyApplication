@@ -1,5 +1,4 @@
 import ToDoItem from '../view/ToDoItem';
-import CommonConstants from '../common/constant/CommonConstants';
 import DataModel from '../viewmodel/DataModel';
 import router from '@ohos.router';
 @Entry
@@ -10,7 +9,7 @@ struct ToDoLisPage {
   build() {
 
       Column() {
-        Text('待办').fontWeight(FontWeight.Bold).fontSize(48)
+        Text('待办（点击返回）').fontWeight(FontWeight.Bold).fontSize(48)
           .onClick(()=>{
               router.back();
           });
@@ -20,7 +19,7 @@ struct ToDoLisPage {
       }
   }
   onBackPress(){
-    console.log('页面 onBackPress')
+    console.log('页面 onBackPress，物理键返回拦截成功')
     return true;///拦截物理返回
   }
 }

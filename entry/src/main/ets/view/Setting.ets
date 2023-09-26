@@ -115,7 +115,7 @@ export default struct Setting {
           router.enableAlertBeforeBackPage({
             message: '确定退出登录？'
           });
-          router.back({
+          router.replaceUrl({
             url: "pages/LoginPage",
             params:{
               src:'返回登录页面回传数据'

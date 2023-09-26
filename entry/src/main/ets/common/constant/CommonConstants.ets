@@ -75,6 +75,7 @@ export default class CommonConstants{
    * Mine tab index
    */
   static readonly MINE_TAB_INDEX = 2;
+  static readonly DEMO_TAB_INDEX = 3;
 
 
 }
