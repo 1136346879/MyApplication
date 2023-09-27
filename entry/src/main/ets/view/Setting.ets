@@ -15,6 +15,7 @@
 
 import CommonConstants from '../common/constant/CommonConstants';
 import ItemData from '../common/bean/ItemData';
+import Logger from '../common/utils/Logger';
 import mainViewModel from '../viewmodel/MainViewModel';
 import router from '@ohos.router';
 
@@ -46,6 +47,12 @@ export default struct Setting {
     .padding({
       left: $r('app.float.setting_settingCell_left'),
       right: $r('app.float.setting_settingCell_right')
+    }).onClick(()=>{
+      Logger.error('======='+item.title.bundleName );
+
+      // if (item.title.bundleName == 'setting_list_storage'){
+        router.pushUrl({url:'pages/SetAppFontSizePage'})
+      // }
     })
   }
 

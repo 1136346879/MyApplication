@@ -1,4 +1,4 @@
-
+import dataPreferences from '@ohos.data.preferences';
 import prompt from '@ohos.promptAction';
 import router from '@ohos.router';
 import CommonConstants from '../common/constant/CommonConstants';

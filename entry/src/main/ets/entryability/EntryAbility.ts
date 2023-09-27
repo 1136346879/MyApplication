@@ -1,10 +1,16 @@
 import UIAbility from '@ohos.app.ability.UIAbility';
 import hilog from '@ohos.hilog';
 import window from '@ohos.window';
+import CommonConstants from '../common/constant/CommonConstants';
+import PreferencesUtil from '../common/database/PreferencesUtil';
 
 export default class EntryAbility extends UIAbility {
   onCreate(want, launchParam) {
     hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
+    globalThis.abilityWant = want;
+    PreferencesUtil.createFontPreferences(this.context);
+    // 设置字体默认大小
+    PreferencesUtil.saveDefaultFontSize(CommonConstants.SET_SIZE_NORMAL);
   }
 
   onDestroy() {

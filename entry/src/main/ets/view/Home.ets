@@ -16,7 +16,7 @@
 import CommonConstants from '../common/constant/CommonConstants';
 import mainViewModel from '../viewmodel/MainViewModel';
 import ItemData from '../common/bean/ItemData';
-
+import prompt from '@ohos.promptAction';
 /**
  * Home tab content
  */
@@ -39,7 +39,11 @@ export default struct Home {
 
         Swiper(this.swiperController) {
           ForEach(mainViewModel.getSwiperImages(), (img: Resource) => {
-            Image(img).borderRadius($r('app.float.home_swiper_borderRadius'))
+            Image(img).borderRadius($r('app.float.home_swiper_borderRadius')).onClick(()=>{
+              prompt.showToast({
+                message: '点击了banner'
+              })
+            })
           }, img => img.id)
         }
         .margin({ top: $r('app.float.home_swiper_margin') })
