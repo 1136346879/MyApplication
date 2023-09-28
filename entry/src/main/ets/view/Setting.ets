@@ -22,6 +22,7 @@ import router from '@ohos.router';
 /**
  * Setting tab content
  */
+@Entry
 @Component
 export default struct Setting {
   @Builder settingCell(item: ItemData) {
@@ -48,11 +49,11 @@ export default struct Setting {
       left: $r('app.float.setting_settingCell_left'),
       right: $r('app.float.setting_settingCell_right')
     }).onClick(()=>{
-      Logger.error('======='+item.title.bundleName );
+      Logger.error('======='+$r(item.title.toString()) );
 
-      // if (item.title.bundleName == 'setting_list_storage'){
+      if (item.index == 1){
         router.pushUrl({url:'pages/SetAppFontSizePage'})
-      // }
+      }
     })
   }
 

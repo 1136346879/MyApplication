@@ -10,6 +10,7 @@
     "pages/FindPage",
     "pages/DemoPage",
     "pages/SetAppFontSizePage",
-    "pages/SetFontSizePage"
+    "pages/SetFontSizePage",
+    "pages/LibraryPage"
   ]
 }

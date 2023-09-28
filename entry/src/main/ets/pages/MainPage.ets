@@ -18,6 +18,7 @@ import Home from "../view/Home"
 import Setting from "../view/Setting"
 import FindPage from './FindPage';
 import DemoPage from './DemoPage';
+import LibraryPage from './LibraryPage';
 
 /**
  * Main page
@@ -75,12 +76,22 @@ struct MainPage {
       .backgroundColor($r('app.color.mainPage_backgroundColor'))
       .tabBar(this.TabBuilder(CommonConstants.MINE_TITLE, CommonConstants.MINE_TAB_INDEX,
       $r('app.media.mine_selected'), $r('app.media.mine_normal')))
+
+
       TabContent() {
         DemoPage()
       }
       .padding({ left: $r('app.float.mainPage_padding'), right: $r('app.float.mainPage_padding') })
       .backgroundColor($r('app.color.mainPage_backgroundColor'))
-      .tabBar(this.TabBuilder(CommonConstants.FIND_TITLE, CommonConstants.DEMO_TAB_INDEX,
+      .tabBar(this.TabBuilder(CommonConstants.DEMO_TITLE, CommonConstants.DEMO_TAB_INDEX,
+        $r('app.media.ic_ok'), $r('app.media.ic_default')))
+
+      TabContent() {
+        LibraryPage()
+      }
+      .padding({ left: $r('app.float.mainPage_padding'), right: $r('app.float.mainPage_padding') })
+      .backgroundColor($r('app.color.mainPage_backgroundColor'))
+      .tabBar(this.TabBuilder(CommonConstants.BOTTOM_TITLE, CommonConstants.LIB_TAB_INDEX,
         $r('app.media.ic_ok'), $r('app.media.ic_default')))
     }
     .width(CommonConstants.FULL_PARENT)

@@ -2,7 +2,7 @@ import dataPreferences from '@ohos.data.preferences';
 import prompt from '@ohos.promptAction';
 import router from '@ohos.router';
 import CommonConstants from '../common/constant/CommonConstants';
-
+import { Buttons } from '@ohos/library';
 @Extend(TextInput) function inputStyle () {
   .placeholderColor($r('app.color.placeholder_color'))
   .height($r('app.float.login_input_height'))
@@ -70,8 +70,6 @@ struct LoginPage {
 
   build() {
     Column() {
-      Image('https://pics4.baidu.com/feed/1c950a7b02087bf4acb51462ccc49e2010dfcf80.jpeg@f_auto?token=f1409de7346798799e5d9ee3934c25fa')
-        .width(78).height(78)
       Image($r('app.media.logo'))
         .width($r('app.float.logo_image_size'))
         .height($r('app.float.logo_image_size'))

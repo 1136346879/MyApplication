@@ -1,12 +1,10 @@
 {
-  "license": "",
+  "license": "Apache-2.0",
   "devDependencies": {},
   "author": "",
-  "name": "entry",
+  "name": "library",
   "description": "Please describe the basic information.",
-  "main": "",
+  "main": "index.ets",
   "version": "1.0.0",
-  "dependencies": {
-    "@ohos/library": "file:../library"
-  }
+  "dependencies": {}
 }

@@ -1,4 +1,54 @@
 export default class CommonConstants{
+
+  /**
+   * The space of column component.
+   */
+  static readonly SPACE_12 = 12;
+
+  /**
+   * The font weight of needed component.
+   */
+  static readonly FONT_WEIGHT_400 = 400;
+
+  /**
+   * The opacity of needed component.
+   */
+  static readonly OPACITY_4 = 0.4;
+  static readonly OPACITY_6 = 0.6;
+
+  /**
+   * The ratio of component's width and height.
+   */
+  static readonly ASPECT_RATIO_176 = 1.76;
+
+  /**
+   * The percent of component's width and height.
+   */
+  static readonly CONTAINER_WIDTH = '100%'
+  static readonly CONTAINER_HALF_WIDTH = '49%'
+  static readonly CONTAINER_HEIGHT = '100%'
+  static readonly BAR_WIDTH = '80%'
+
+  /**
+   * The logger tag of outer component.
+   */
+  static readonly OUTER_TAG = 'Outer';
+
+  /**
+   * The order number of tab component.
+   */
+  static readonly FIRST_TAB = 0;
+  static readonly SECOND_TAB = 1;
+
+  /**
+   * The animate name of the third library.
+   */
+  static readonly ANIMATE_NAME = 'data';
+
+  /**
+   * The zero frame of the third library.
+   */
+  static readonly ZERO_FRAME = 0;
   /**
    * Small font size.
    */
@@ -112,6 +162,8 @@ export default class CommonConstants{
    */
   static readonly HOME_TITLE = '首页';
   static readonly FIND_TITLE = '发现';
+  static readonly DEMO_TITLE = 'demo';
+  static readonly BOTTOM_TITLE = '地库';
 
   /**
    * Title text of the setting page
@@ -144,6 +196,7 @@ export default class CommonConstants{
    */
   static readonly MINE_TAB_INDEX = 2;
   static readonly DEMO_TAB_INDEX = 3;
+  static readonly LIB_TAB_INDEX = 4;
 
 
 }

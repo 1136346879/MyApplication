@@ -78,12 +78,12 @@ export class MainViewModel {
    */
   getSettingListData(): Array<ItemData> {
     let settingListData: ItemData[] = [
-      new ItemData($r('app.string.setting_list_news'), $r("app.media.news"), $r("app.string.setting_toggle")),
-      new ItemData($r('app.string.setting_list_data'), $r("app.media.data"), null),
-      new ItemData($r('app.string.setting_list_menu'), $r("app.media.menu"), null),
-      new ItemData($r('app.string.setting_list_about'), $r("app.media.about"), null),
-      new ItemData($r('app.string.setting_list_storage'), $r("app.media.storage"), null),
-      new ItemData($r('app.string.setting_list_privacy'), $r("app.media.privacy"), null)
+      new ItemData($r('app.string.setting_list_news'), $r("app.media.news"), $r("app.string.setting_toggle"),0),
+      new ItemData($r('app.string.setting_list_data'), $r("app.media.data"), null,1),
+      new ItemData($r('app.string.setting_list_menu'), $r("app.media.menu"), null,2),
+      new ItemData($r('app.string.setting_list_about'), $r("app.media.about"), null,3),
+      new ItemData($r('app.string.setting_list_storage'), $r("app.media.storage"), null,4),
+      new ItemData($r('app.string.setting_list_privacy'), $r("app.media.privacy"), null,5)
     ];
     return settingListData;
   }

@@ -20,7 +20,7 @@ import CommonConstants from '../common/constant/CommonConstants';
 import StyleConstants from '../common/constant/StyleConstants';
 import Logger from '../common/utils/Logger';
 import PreferencesUtil from '../common/database/Preferencesutil';
-
+import router from '@ohos.router';
 const TAG = '[SetFontSizePage]';
 
 /**
@@ -45,7 +45,7 @@ struct SetFontSizePage {
 
   build() {
     Column() {
-      TitleBarComponent({ title: $r('app.string.set_title') })
+      TitleBarComponent({isBack:true, title: $r('app.string.set_title') })
 
       if (this.changeFontSize > 0) {
         List() {

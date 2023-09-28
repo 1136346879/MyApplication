@@ -8,6 +8,8 @@ export default struct DemoPage {
   build() {
     Row() {
       Column() {
+        Image('https://pics4.baidu.com/feed/1c950a7b02087bf4acb51462ccc49e2010dfcf80.jpeg@f_auto?token=f1409de7346798799e5d9ee3934c25fa')
+          .width(78).height(78)
         Text(this.message)
           .fontSize(50)
           .fontColor(Color.Red)

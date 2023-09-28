@@ -29,10 +29,12 @@ export default class PageResource {
    * Other resource of list item.
    */
   others?: Resource;
+  index?: number;
 
-  constructor(title: Resource, img?: Resource, others?: Resource) {
+  constructor(title: Resource, img?: Resource, others?: Resource,index?: number) {
     this.title = title;
     this.img = img;
     this.others = others;
+    this.index = index;
   }
 }

@@ -42,7 +42,7 @@ struct SetAppFontSizePage {
 
   build() {
     Column() {
-      TitleBarComponent({ isBack: false, title: $r('app.string.home_title') })
+      TitleBarComponent({ isBack: true, title: $r('app.string.home_title') })
 
       Row() {
         SettingItemComponent({
