@@ -3,6 +3,7 @@ import prompt from '@ohos.promptAction';
 import router from '@ohos.router';
 import CommonConstants from '../common/constant/CommonConstants';
 import { Buttons } from '@ohos/library';
+import PreferencesUtil from '../common/database/PreferencesUtil';
 @Extend(TextInput) function inputStyle () {
   .placeholderColor($r('app.color.placeholder_color'))
   .height($r('app.float.login_input_height'))
@@ -31,12 +32,11 @@ import { Buttons } from '@ohos/library';
 @Entry
 @Component
 struct LoginPage {
-  @State account: string = '123';
+  @State account: string = '';
   @State password: string = '';
   @State isShowProgress: boolean = false;
   private timeOutId = null;
   @State message :string ='';
-
   @Builder imageButton(src: Resource) {
     Button({ type: ButtonType.Circle, stateEffect: true }) {
       Image(src)
@@ -52,6 +52,7 @@ struct LoginPage {
         message: $r('app.string.input_empty_tips')
       })
     } else {
+      PreferencesUtil.saveAccountPassWord(this.account,this.password);
       this.isShowProgress = true;
       if (this.timeOutId === null) {
         this.timeOutId = setTimeout(() => {
@@ -83,7 +84,7 @@ struct LoginPage {
         .fontColor($r('app.color.login_more_text_color'))
         .margin({ bottom: $r('app.float.login_more_margin_bottom'), top: $r('app.float.login_more_margin_top') })
 
-      TextInput({ placeholder: $r('app.string.account') })
+      TextInput({ placeholder: $r('app.string.account') ,text:this.account})
         .maxLength(CommonConstants.INPUT_ACCOUNT_LENGTH)
         .type(InputType.Number)
         .inputStyle()
@@ -92,7 +93,7 @@ struct LoginPage {
         })
       Line().lineStyle()
 
-      TextInput({ placeholder: $r('app.string.password') })
+      TextInput({ placeholder: $r('app.string.password'),text:this.password })
         .maxLength(CommonConstants.INPUT_PASSWORD_LENGTH)
         .type(InputType.Password)
         .inputStyle()
@@ -164,6 +165,14 @@ struct LoginPage {
   onPageShow(){
     console.log('onPageShow')
     this.message = router.getParams()?.['src']??"登录"
+    PreferencesUtil.getAccount().then((value) => {
+      this.account = value.toString();
+      console.log('onPageShow account'+ value.toString())
+    });
+    PreferencesUtil.getPassWord().then((value) => {
+      this.password = value.toString();
+      console.log('onPageShow password'+ value.toString())
+    });
   }
   onPageHide(){
     console.log('onPageHide')

@@ -19,6 +19,8 @@ import Logger from '../utils/Logger';
 const TAG = '[PreferencesUtil]';
 const PREFERENCES_NAME = 'myPreferences';
 const KEY_APP_FONT_SIZE = 'appFontSize';
+const KEY_APP_ACCOUNT = 'account';
+const KEY_APP_PASSWORD = 'password';
 
 /**
  * The PreferencesUtil provides preferences of create, save and query.
@@ -55,6 +57,15 @@ export class PreferencesUtil {
       Logger.error(TAG, 'put the preferences failed, err: ' + err);
     });
   }
+  saveAccountPassWord(account: string,password:string) {
+    globalThis.getFontPreferences().then(async (preferences) => {
+      await preferences.put(KEY_APP_ACCOUNT, account);
+      await preferences.put(KEY_APP_PASSWORD, password);
+      preferences.flush();
+    }).catch((err) => {
+      Logger.error(TAG, 'put the preferences failed, err: ' + err);
+    });
+  }
 
   async getChangeFontSize() {
     let fontSize: number = 0;
@@ -62,7 +73,18 @@ export class PreferencesUtil {
     fontSize = await preferences.get(KEY_APP_FONT_SIZE, fontSize);
     return fontSize;
   }
-  
+  async getAccount() {
+    let fontSize: String = '';
+    const preferences = await globalThis.getFontPreferences();
+    fontSize = await preferences.get(KEY_APP_ACCOUNT, fontSize);
+    return fontSize;
+  }
+  async getPassWord() {
+    let fontSize: String = '';
+    const preferences = await globalThis.getFontPreferences();
+    fontSize = await preferences.get(KEY_APP_PASSWORD, fontSize);
+    return fontSize;
+  }
    async deleteChangeFontSize() {
     const preferences: dataPreferences.Preferences = await globalThis.getFontPreferences();
     let deleteValue = preferences.delete(KEY_APP_FONT_SIZE);
