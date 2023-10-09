@@ -90,7 +90,9 @@ export default struct Setting {
         .height($r('app.float.setting_account_height'))
         .backgroundColor(Color.White)
         .padding({ left: $r('app.float.setting_account_padding') })
-        .borderRadius($r('app.float.setting_account_borderRadius'))
+        .borderRadius($r('app.float.setting_account_borderRadius')).onClick(()=>{
+          router.pushUrl({url:'pages/PersonalInfoPage'})
+        })
 
         List() {
           ForEach(mainViewModel.getSettingListData(), (item: ItemData) => {

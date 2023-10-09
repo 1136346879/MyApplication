@@ -1,5 +1,8 @@
 import router from '@ohos.router';
 import CommonConstants from '../common/constant/CommonConstants';
+import CommonUtils from '../common/utils/CommonUtils';
+import Logger from '../common/utils/Logger';
+import Context from '@ohos.app.ability.common';
 @Entry
 @Component
 struct Index {
@@ -24,6 +27,16 @@ struct Index {
   aboutToDisappear(){
     // 释放资源
     console.log('页面 disAppear')
+  }
+  onBackPress(){
+    console.log('页面 onBackPress，物理键返回拦截成功')
+    // let context = getContext(this) as Context.UIAbilityContext;
+    // CommonUtils.alertDialog(context,(birthValue: number) => {
+    //   // Exiting the app.
+    //   context.terminateSelf();
+    //   return false;///拦截物理返回
+    // });
+    return true;///拦截物理返回
   }
 }
 
