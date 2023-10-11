@@ -1,19 +1,32 @@
 {
   "app": {
     "signingConfigs": [
-//      {
-//        "name": "default",
-//        "type": "HarmonyOS",
-//        "material": {
-//          "certpath": "/Users/zhangyan/.ohos/config/auto_debug_MyApplication_com.example.myapplication_40086000137564522.cer",
-//          "storePassword": "0000001BFB8F40E7839D0CB4C5AC7967C3B7C80343F7A2AB2CFE96DAFE596DEACDD8568E13E7B879530527",
-//          "keyAlias": "debugKey",
-//          "keyPassword": "0000001BF0493B308C59A3DC8883BFC622CC51495995C2378C766C42EF53CDF4A30A11A2E4CE1207BE4D29",
-//          "profile": "/Users/zhangyan/.ohos/config/auto_debug_MyApplication_com.example.myapplication_40086000137564522.p7b",
-//          "signAlg": "SHA256withECDSA",
-//          "storeFile": "/Users/zhangyan/.ohos/config/auto_debug_MyApplication_com.example.myapplication_40086000137564522.p12"
-//        }
-//      }
+      //      {
+      //        "name": "default",
+      //        "type": "HarmonyOS",
+      //        "material": {
+      //          "certpath": "/Users/zhangyan/.ohos/config/auto_debug_MyApplication_com.example.myapplication_40086000137564522.cer",
+      //          "storePassword": "0000001BFB8F40E7839D0CB4C5AC7967C3B7C80343F7A2AB2CFE96DAFE596DEACDD8568E13E7B879530527",
+      //          "keyAlias": "debugKey",
+      //          "keyPassword": "0000001BF0493B308C59A3DC8883BFC622CC51495995C2378C766C42EF53CDF4A30A11A2E4CE1207BE4D29",
+      //          "profile": "/Users/zhangyan/.ohos/config/auto_debug_MyApplication_com.example.myapplication_40086000137564522.p7b",
+      //          "signAlg": "SHA256withECDSA",
+      //          "storeFile": "/Users/zhangyan/.ohos/config/auto_debug_MyApplication_com.example.myapplication_40086000137564522.p12"
+      //        }
+      //      }
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "/Users/zhangyan/.ohos/config/auto_debug_MyApplication_com.example.myapplication_40086000137564522.cer",
+          "storePassword": "0000001B6DE14ACDE0D49A0BC946953B68CEF79A7DD5B4FE617CE634AF72D3EEB5BD49425378C09A9EFFC2",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001BE4097DBF4B35D6D8C9C753E5F64B4C9477AB04C2E6D2F013775CFAE4A8E6BEC96363DE9231238D",
+          "profile": "/Users/zhangyan/.ohos/config/auto_debug_MyApplication_com.example.myapplication_40086000137564522.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "/Users/zhangyan/.ohos/config/auto_debug_MyApplication_com.example.myapplication_40086000137564522.p12"
+        }
+      }
     ],
     "compileSdkVersion": 9,
     "compatibleSdkVersion": 9,
@@ -25,6 +38,10 @@
     ]
   },
   "modules": [
+    {
+      "name": "common",
+      "srcPath": "./common"
+    },
     {
       "name": "entry",
       "srcPath": "./entry",

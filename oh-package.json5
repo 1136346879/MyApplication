@@ -1,5 +1,5 @@
 {
-  "license": "",
+  "license": "ISC",
   "devDependencies": {
     "@ohos/hypium": "1.0.6"
   },
@@ -9,6 +9,14 @@
   "main": "",
   "version": "1.0.0",
   "dependencies": {
+    "@ohos/protobufjs": "1.0.0",
+    "@ohos/retrofit": "file:./lib/retrofit.har",
+    "@ohos/imageknife": "file:lib/imageknife.har",
+    "@ohos/disklrucache": "2.0.0",
+    "@ohos/svg": "2.0.0",
+    "@ohos/danmakuflamemaster": "file:./lib/DanmakuFlameMaster.har",
+    "@ohos/ijkplayer": "file:./lib/ijkplayer.har",
+    "@ohos/pulltorefresh": "file:lib/PullToRefresh.har",
     "@ohos/lottie": "^2.0.4"
   }
 }

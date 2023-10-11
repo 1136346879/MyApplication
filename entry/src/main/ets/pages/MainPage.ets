@@ -19,6 +19,9 @@ import Setting from "../view/Setting"
 import FindPage from './FindPage';
 import DemoPage from './DemoPage';
 import LibraryPage from './LibraryPage';
+import { MineView } from '../view/MineView';
+import { MomentsView } from '../view/MomentsView';
+import { HomeView } from '../view/HomeView';
 
 /**
  * Main page
@@ -32,6 +35,7 @@ struct MainPage {
   @Builder TabBuilder(title: string, index: number, selectedImg: Resource, normalImg: Resource) {
     Column() {
       Image(this.currentIndex === index ? selectedImg : normalImg)
+        .fillColor(this.currentIndex === index ? '#1698CE' : '#6B6B6B')
         .width($r('app.float.mainPage_baseTab_size'))
         .height($r('app.float.mainPage_baseTab_size'))
       Text(title)
@@ -93,7 +97,32 @@ struct MainPage {
       .backgroundColor($r('app.color.mainPage_backgroundColor'))
       .tabBar(this.TabBuilder(CommonConstants.BOTTOM_TITLE, CommonConstants.LIB_TAB_INDEX,
         $r('app.media.ic_ok'), $r('app.media.ic_default')))
+
+      TabContent() {
+        HomeView()
+      }
+      .padding({ left: $r('app.float.mainPage_padding'), right: $r('app.float.mainPage_padding') })
+      .backgroundColor($r('app.color.mainPage_backgroundColor'))
+      .tabBar(this.TabBuilder(CommonConstants.SY_TITLE, CommonConstants.SY_TAB_INDEX, $r('app.media.ic_tab_bar_home'), $r('app.media.ic_tab_bar_home')))
+
+      TabContent() {
+        MomentsView()
+      }.padding({ left: $r('app.float.mainPage_padding'), right: $r('app.float.mainPage_padding') })
+      .backgroundColor($r('app.color.mainPage_backgroundColor'))
+      .tabBar(this.TabBuilder(CommonConstants.ACTION_TITLE, CommonConstants.ACTION_TAB_INDEX, $r('app.media.ic_tab_bar_moments'), $r('app.media.ic_tab_bar_moments')))
+
+      /*TabContent() {
+        Text($r('app.string.func_develop')).fontSize(16)
+      }
+      .tabBar(this.TabBuilder($r('app.string.live_stream'), 2, $r('app.media.ic_tab_bar_shopping')))*/
+
+      TabContent() {
+        MineView()
+      }.padding({ left: $r('app.float.mainPage_padding'), right: $r('app.float.mainPage_padding') })
+      .backgroundColor($r('app.color.mainPage_backgroundColor'))
+      .tabBar(this.TabBuilder(CommonConstants.MINE_TITLE, CommonConstants.MY_TAB_INDEX, $r('app.media.ic_tab_bar_mine'),$r('app.media.ic_tab_bar_mine')))
     }
+    .scrollable(true)
     .width(CommonConstants.FULL_PARENT)
     .backgroundColor(Color.White)
     .barHeight($r('app.float.mainPage_barHeight'))

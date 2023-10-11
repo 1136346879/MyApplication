@@ -7,6 +7,7 @@
   "main": "",
   "version": "1.0.0",
   "dependencies": {
+    "@ohos/common": "file:../common",
     "@ohos/library": "file:../library"
   }
 }

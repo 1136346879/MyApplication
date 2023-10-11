@@ -5,8 +5,41 @@
     "description": "$string:module_desc",
     "mainElement": "EntryAbility",
     "requestPermissions": [{
-      "name": "ohos.permission.INTERNET"
+      "name": "ohos.permission.INTERNET",
+      "usedScene": {
+        "abilities": [
+          "EntryAbility"
+        ],
+        "when": "always"
+      }
     },
+      {
+        "name": "ohos.permission.GET_NETWORK_INFO",
+        "usedScene": {
+          "abilities": [
+            "EntryAbility"
+          ],
+          "when": "always"
+        }
+      },
+      {
+        "name": "ohos.permission.MEDIA_LOCATION",
+        "usedScene": {
+          "abilities": [
+            "EntryAbility"
+          ],
+          "when": "always"
+        }
+      },
+      {
+        "name": "ohos.permission.READ_MEDIA",
+        "usedScene": {
+          "abilities": [
+            "EntryAbility"
+          ],
+          "when": "always"
+        }
+      }
     ],
     "deviceTypes": [
       "phone"

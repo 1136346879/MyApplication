@@ -12,6 +12,16 @@
     "pages/SetAppFontSizePage",
     "pages/SetFontSizePage",
     "pages/LibraryPage",
-    "pages/PersonalInfoPage"
+    "pages/PersonalInfoPage",
+    "pages/Splash",
+    "pages/Login",
+    "pages/Search",
+    "pages/SearchResult",
+    "pages/Setting",
+    "pages/TopSearch",
+    "pages/Video",
+    "pages/About",
+    "pages/Feedback",
+    "pages/LogDetail"
   ]
 }

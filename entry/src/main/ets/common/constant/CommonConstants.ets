@@ -272,6 +272,8 @@ export default class CommonConstants{
   static readonly FIND_TITLE = '发现';
   static readonly DEMO_TITLE = 'demo';
   static readonly BOTTOM_TITLE = '地库';
+  static readonly SY_TITLE = 'shouy';
+  static readonly ACTION_TITLE = '动态';
 
   /**
    * Title text of the setting page
@@ -305,6 +307,9 @@ export default class CommonConstants{
   static readonly MINE_TAB_INDEX = 2;
   static readonly DEMO_TAB_INDEX = 3;
   static readonly LIB_TAB_INDEX = 4;
+  static readonly SY_TAB_INDEX = 5;
+  static readonly ACTION_TAB_INDEX = 6;
+  static readonly MY_TAB_INDEX = 7;
 
 
 }
