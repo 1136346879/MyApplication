@@ -71,39 +71,39 @@ struct MainPage {
       .padding({ left: $r('app.float.mainPage_padding'), right: $r('app.float.mainPage_padding') })
       .backgroundColor($r('app.color.mainPage_backgroundColor'))
       .tabBar(this.TabBuilder(CommonConstants.FIND_TITLE, CommonConstants.FIND_TAB_INDEX,
-        $r('app.media.ic_ok'), $r('app.media.ic_default')))
+        $r('app.media.mine_selected'), $r('app.media.mine_normal')))
 
-      TabContent() {
-        Setting()
-      }
-      .padding({ left: $r('app.float.mainPage_padding'), right: $r('app.float.mainPage_padding') })
-      .backgroundColor($r('app.color.mainPage_backgroundColor'))
-      .tabBar(this.TabBuilder(CommonConstants.MINE_TITLE, CommonConstants.MINE_TAB_INDEX,
-      $r('app.media.mine_selected'), $r('app.media.mine_normal')))
+      // TabContent() {
+      //   Setting()
+      // }
+      // .padding({ left: $r('app.float.mainPage_padding'), right: $r('app.float.mainPage_padding') })
+      // .backgroundColor($r('app.color.mainPage_backgroundColor'))
+      // .tabBar(this.TabBuilder(CommonConstants.MINE_TITLE, CommonConstants.MINE_TAB_INDEX,
+      // $r('app.media.mine_selected'), $r('app.media.mine_normal')))
 
 
-      TabContent() {
-        DemoPage()
-      }
-      .padding({ left: $r('app.float.mainPage_padding'), right: $r('app.float.mainPage_padding') })
-      .backgroundColor($r('app.color.mainPage_backgroundColor'))
-      .tabBar(this.TabBuilder(CommonConstants.DEMO_TITLE, CommonConstants.DEMO_TAB_INDEX,
-        $r('app.media.ic_ok'), $r('app.media.ic_default')))
+      // TabContent() {
+      //   DemoPage()
+      // }
+      // .padding({ left: $r('app.float.mainPage_padding'), right: $r('app.float.mainPage_padding') })
+      // .backgroundColor($r('app.color.mainPage_backgroundColor'))
+      // .tabBar(this.TabBuilder(CommonConstants.DEMO_TITLE, CommonConstants.DEMO_TAB_INDEX,
+      //   $r('app.media.ic_ok'), $r('app.media.ic_default')))
 
-      TabContent() {
-        LibraryPage()
-      }
-      .padding({ left: $r('app.float.mainPage_padding'), right: $r('app.float.mainPage_padding') })
-      .backgroundColor($r('app.color.mainPage_backgroundColor'))
-      .tabBar(this.TabBuilder(CommonConstants.BOTTOM_TITLE, CommonConstants.LIB_TAB_INDEX,
-        $r('app.media.ic_ok'), $r('app.media.ic_default')))
+      // TabContent() {
+      //   LibraryPage()
+      // }
+      // .padding({ left: $r('app.float.mainPage_padding'), right: $r('app.float.mainPage_padding') })
+      // .backgroundColor($r('app.color.mainPage_backgroundColor'))
+      // .tabBar(this.TabBuilder(CommonConstants.BOTTOM_TITLE, CommonConstants.LIB_TAB_INDEX,
+      //   $r('app.media.ic_ok'), $r('app.media.ic_default')))
 
       TabContent() {
         HomeView()
       }
       .padding({ left: $r('app.float.mainPage_padding'), right: $r('app.float.mainPage_padding') })
       .backgroundColor($r('app.color.mainPage_backgroundColor'))
-      .tabBar(this.TabBuilder(CommonConstants.SY_TITLE, CommonConstants.SY_TAB_INDEX, $r('app.media.ic_tab_bar_home'), $r('app.media.ic_tab_bar_home')))
+      .tabBar(this.TabBuilder(CommonConstants.VIDEO_TITLE, CommonConstants.VIDEO_TAB_INDEX, $r('app.media.ic_tab_bar_home'), $r('app.media.ic_tab_bar_home')))
 
       TabContent() {
         MomentsView()

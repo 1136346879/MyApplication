@@ -12,6 +12,7 @@ import  { Logger } from '@ohos/common';
 export default class EntryAbility extends UIAbility {
   private netConn: connection.NetConnection;
   onCreate(want, launchParam) {
+    /// 应用初始化
     hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
     globalThis.appContext = this.context;
     globalThis.resourceMana = this.context.resourceManager;
@@ -31,6 +32,8 @@ export default class EntryAbility extends UIAbility {
   }
 
   onWindowStageCreate(windowStage: window.WindowStage) {
+    /// 设置UI加载
+    /// 设置windowStage的事件订阅，（获焦，失焦   可见 不可见）
     globalThis.windowStage = windowStage;
     globalThis.filesDir = this.context.filesDir;
     AppStorage.SetOrCreate("netIsAvailable", true);
@@ -50,16 +53,20 @@ export default class EntryAbility extends UIAbility {
   }
 
   onWindowStageDestroy() {
+    ///释放UI资源
     // Main window is destroyed, release UI related resources
     hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageDestroy');
   }
 
   onForeground() {
+    /// 申请系统需要的资源   或者重新申请在onBackGround中释放的资源
     // Ability has brought to foreground
     hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onForeground');
   }
 
   onBackground() {
+    ///释放UI页面不可见时的无用资源， 或者在此回调中执行较为耗时的操作
+    /// 例如 状态保存等
     // Ability has back to background
     hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onBackground');
   }

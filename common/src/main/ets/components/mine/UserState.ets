@@ -9,7 +9,8 @@
  * MERCHANTABILITY OR FIT FOR A PARTICULAR PURPOSE.
  * See the Mulan PSL v2 for more details.
  */
-
+import router from '@ohos.router'
+import prompt from '@ohos.promptAction';
 @Component
 export struct UserStateView {
   build() {
@@ -22,7 +23,12 @@ export struct UserStateView {
           .fontSize(12)
           .fontColor('#888888')
           .margin({ top: 4 })
-      }.layoutWeight(1)
+      }.layoutWeight(1).onClick(()=>{
+        prompt.showToast({
+          message: '点击了动态'
+        })
+        // router.pushUrl({ url: "pages/DemoPage" });
+      })
 
       Flex().width(1).height(20).backgroundColor("#eeeeee")
 
