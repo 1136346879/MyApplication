@@ -13,6 +13,7 @@
 import { OhNavBar } from '@ohos/common'
 import promptAction from '@ohos.promptAction'
 import router from '@ohos.router';
+import DemoPage from '../pages/DemoPage';
 
 @Component
 export struct MomentsView {
@@ -26,12 +27,12 @@ export struct MomentsView {
         Text("你还未登录").fontSize(16).fontColor(Color.Black).fontWeight(FontWeight.Medium).margin({top: 48})
         Text("登录账号，查看你关注的UP主内容").fontSize(15).fontColor('#888888').margin({top: 16})
         Button("登录").width(240).margin({top: 16}).onClick(() => {
-          router.pushUrl({url: "pages/Login"})
+          router.pushUrl({url: "pages/LoginPage"})
         })
       }
       else
       {
-        Text("待实现").margin({top: 48})
+        DemoPage()
       }
     }.width('100%').height('100%')
   }

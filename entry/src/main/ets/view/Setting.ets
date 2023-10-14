@@ -51,7 +51,7 @@ export default struct Setting {
     }).onClick(()=>{
       Logger.error('======='+$r(item.title.toString()) );
 
-      if (item.index == 1){
+      if (item.index == 2){
         router.pushUrl({url:'pages/SetAppFontSizePage'})
       }
     })
@@ -125,6 +125,7 @@ export default struct Setting {
           router.enableAlertBeforeBackPage({
             message: '确定退出登录？'
           });
+          AppStorage.SetOrCreate("isOhBiliLoggedIn", false);
           router.replaceUrl({
             url: "pages/LoginPage",
             params:{

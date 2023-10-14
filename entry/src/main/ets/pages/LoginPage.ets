@@ -53,6 +53,7 @@ struct LoginPage {
       })
     } else {
       PreferencesUtil.saveAccountPassWord(this.account,this.password);
+      AppStorage.SetOrCreate("isOhBiliLoggedIn", true);
       this.isShowProgress = true;
       if (this.timeOutId === null) {
         this.timeOutId = setTimeout(() => {
@@ -109,6 +110,9 @@ struct LoginPage {
       .justifyContent(FlexAlign.SpaceBetween)
       .width(CommonConstants.FULL_PARENT)
       .margin({ top: $r('app.float.forgot_margin_top') })
+      .onClick(()=>{
+        router.pushUrl({ url: "pages/PhoneLogin" });
+      })
 
       Button($r('app.string.login'), { type: ButtonType.Capsule })
         .width(CommonConstants.BUTTON_WIDTH)

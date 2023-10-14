@@ -22,7 +22,9 @@ export struct UserHeadView {
         .width(64)
         .height(64)
         .borderRadius(32)
-        .margin({ left: 16, right: 16 })
+        .margin({ left: 16, right: 16 }).onClick(()=>{
+        router.pushUrl({ url: "view/Setting" });
+      })
 
       if(!this.loginState)
       {
@@ -30,7 +32,12 @@ export struct UserHeadView {
           .fontSize(18)
           .fontColor('#333333')
           .fontWeight(FontWeight.Medium)
-          .maxLines(1)
+          .maxLines(1).onClick(() => {
+          if(!this.loginState){
+            router.pushUrl({url: "pages/LoginPage"})
+            return;
+          }
+        })
       }
 
       Blank()
@@ -43,11 +50,6 @@ export struct UserHeadView {
 
     }.margin({ top: 32, bottom: 32 }).width('100%')
     .justifyContent(FlexAlign.Start)
-    .onClick(() => {
-      if(!this.loginState){
-        router.pushUrl({url: "pages/Login"})
-        return;
-      }
-    })
+
   }
 }

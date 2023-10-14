@@ -39,7 +39,7 @@ struct CountryPicker {
 
 @Entry
 @Component
-struct Login {
+struct PhoneLogin {
   @State countryList: CountryList = {common: [], others: []};
   @State selectedCountry: CountryItem = {cname: "选择国家/地区", id: 0, country_id: "0"}
   @State phoneNumber: string = "";
