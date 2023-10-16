@@ -41,7 +41,7 @@ struct SearchResultPage {
 
   build() {
     Column() {
-      SearchBar({keyword: this.keyword})
+      SearchBar({keyword: this.keyword,show:false})
 
       if (this.isLoading) {
         Text('数据加载中···')

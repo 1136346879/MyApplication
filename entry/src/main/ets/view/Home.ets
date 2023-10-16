@@ -108,6 +108,8 @@ export default struct Home {
         .columnsGap($r('app.float.home_grid_columnsGap'))
         .rowsGap($r('app.float.home_grid_rowGap'))
         .margin({ bottom: $r('app.float.setting_button_bottom')})
+        Text('暂未实现').height(500).width(CommonConstants.FULL_PARENT).backgroundColor(Color.Blue)
+
       }
     }
     .height(CommonConstants.FULL_PARENT)

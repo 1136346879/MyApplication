@@ -29,7 +29,7 @@ export struct HomeSearchBar {
         .focusable(this.isShowPage)
         .layoutWeight(1)
         .backgroundColor(Color.Transparent)
-        .onFocus(() => {
+        .onClick(()=>{
           router.pushUrl({ url: 'pages/Search', params: {
             defaultKeyword: this.searchDefault
           } });
@@ -58,6 +58,7 @@ export struct HomeSearchBar {
 @Component
 export struct SearchBar {
   private keyword?: ResourceStr
+  private show?: boolean = true;
   private placeholder?: ResourceStr = $r('app.string.hint_text')
 
   build() {
@@ -70,6 +71,7 @@ export struct SearchBar {
         }).padding(12)
       TextInput({ text: this.keyword, placeholder: this.placeholder })
         .layoutWeight(1)
+        .visibility(this.show?Visibility.Visible:Visibility.Hidden)
         .margin({ left: 6, right: 12 })
         .onChange((value: string) => {
           this.keyword = value;
@@ -85,7 +87,7 @@ export struct SearchBar {
       Text($r('app.string.search')).padding(12)
         .onClick(() => {
           this.searchKeyword();
-        })
+        }).visibility(this.show?Visibility.Visible:Visibility.Hidden)
     }.width('100%').height(50)
     .padding({ left: 8, right: 8 })
   }
